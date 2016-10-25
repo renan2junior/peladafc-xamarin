@@ -33,6 +33,9 @@
     <EmbeddedResource Include="Views\TimeListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\UsuarioListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -50,6 +53,14 @@
     <Compile Include="Views\TimeListPage.xaml.cs">
       <DependentUpon>TimeListPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\TipoUsuario.cs" />
+    <Compile Include="Data\UsuarioWS.cs" />
+    <Compile Include="Data\UsuarioManager.cs" />
+    <Compile Include="Views\UsuarioListPage.xaml.cs">
+      <DependentUpon>UsuarioListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HomeTabbedPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
@@ -66,6 +77,13 @@
     </Reference>
     <Reference Include="System.Net.Http">
       <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
