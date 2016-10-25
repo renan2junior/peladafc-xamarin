@@ -6,12 +6,10 @@ namespace PeladaFC
 	{
 
 		public static TimeManager Tmanager { get; set; }
-		public static UsuarioManager Umanager { get; set; }
 
 		public App()
 		{
 			Tmanager = new TimeManager(new RestService());
-			Umanager = new UsuarioManager(new UsuarioWS());
 			InitializeComponent();
 
 			MainPage = new HomeTabbedPage();

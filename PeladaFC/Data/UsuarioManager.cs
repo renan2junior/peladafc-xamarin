@@ -6,9 +6,9 @@ namespace PeladaFC
 {
 	public class UsuarioManager
 	{
-		iRestServiceUsuario restService;
+		iRestService<Usuario> restService;
 
-		public UsuarioManager(iRestServiceUsuario restService)
+		public UsuarioManager(iRestService<Usuario> restService)
 		{
 			this.restService = restService;
 		}

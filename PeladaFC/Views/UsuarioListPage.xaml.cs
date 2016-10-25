@@ -9,13 +9,9 @@ namespace PeladaFC
 	{
 		public UsuarioListPage()
 		{
+			BindingContext = new UsuarioListViewModel();
 			InitializeComponent();
 		}
 
-		protected async override void OnAppearing()
-		{
-			base.OnAppearing();
-			listView.ItemsSource = await App.Umanager.GetUsuariosAsync();
-		}
 	}
 }

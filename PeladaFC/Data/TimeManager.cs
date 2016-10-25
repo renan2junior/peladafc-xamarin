@@ -7,9 +7,9 @@ namespace PeladaFC
 	public class TimeManager
 	{
 
-		iRestService restService;
+		iRestService<Time> restService;
 
-		public TimeManager(iRestService service)
+		public TimeManager(iRestService<Time> service)
 		{
 			restService = service;
 		}

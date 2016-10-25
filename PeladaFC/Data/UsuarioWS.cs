@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace PeladaFC
 {
-	public class UsuarioWS : iRestServiceUsuario
+	public class UsuarioWS : iRestService<Usuario>
 	{
 		HttpClient client;
 		public List<Usuario> Usuarios { get; set; }
@@ -16,11 +16,6 @@ namespace PeladaFC
 		{
 			client = new HttpClient();
 			client.MaxResponseContentBufferSize = 256000;
-		}
-
-		public Task DeleteTimeAsync(string id)
-		{
-			throw new NotImplementedException();
 		}
 
 		public async Task<List<Usuario>> RefreshDataAsync()
@@ -45,7 +40,12 @@ namespace PeladaFC
 			return Usuarios;
 		}
 
-		public Task SaveDataTimeAsync(Usuario usuario, bool isNewItem)
+		public Task SaveDataObjAsync(Usuario obj, bool isNewItem)
+		{
+			throw new NotImplementedException();
+		}
+
+		public Task DeleteObjAsync(string id)
 		{
 			throw new NotImplementedException();
 		}
