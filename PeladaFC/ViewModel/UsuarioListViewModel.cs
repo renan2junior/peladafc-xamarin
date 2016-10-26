@@ -26,7 +26,7 @@ namespace PeladaFC
 				if (value != usuarios)
 				{
 					usuarios = value;
-					OnProPertyChanged("Usuarios");
+					//OnProPertyChanged("Usuarios");
 				}
 
 			}
@@ -34,14 +34,23 @@ namespace PeladaFC
 
 		protected async void PegaUsuarios()
 		{
-			Usuarios = new ObservableCollection<Usuario>(await Umanager.GetUsuariosAsync());
+			List<Usuario> lista = await Umanager.GetUsuariosAsync();
+
+			foreach ( Usuario u in lista){
+				Usuarios.Add(u);
+			}
+			
+			// Usuarios = new ObservableCollection<Usuario>(await Umanager.GetUsuariosAsync());
+
 		}
 
 
 		public UsuarioListViewModel()
 		{
 			Umanager = new UsuarioManager(new UsuarioWS());
+			Usuarios = new ObservableCollection<Usuario>();
 			PegaUsuarios();
+
 			/*
 			Usuario u = new Usuario();
 			u.Id = "1";
