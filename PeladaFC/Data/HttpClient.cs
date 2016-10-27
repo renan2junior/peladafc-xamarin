@@ -1,6 +1,0 @@
-﻿namespace PeladaFC
-{
-	class HttpClient
-	{
-	}
-}
